@@ -10,6 +10,10 @@ dot-history
 ruby 2.1.2
 
 ## System dependencies
+```
+apt-get install libssl-dev
+apt-get install libpq-dev
+```
 
 ## Configuration
 
