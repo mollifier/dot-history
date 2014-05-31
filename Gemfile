@@ -69,3 +69,6 @@ group :development, :test do
   gem 'pry-doc'
 end
 
+# Use dotEnv
+gem 'dotenv-rails'
+

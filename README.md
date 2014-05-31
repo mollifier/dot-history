@@ -19,6 +19,11 @@ ruby 2.1.2
 
 ## Configuration
 
+```
+% mv dot.env-example .env
+... and edit .env
+```
+
 ## Database creation
 
 Install postgresql to your box. (Ubuntu 14.04)
