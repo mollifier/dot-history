@@ -2,6 +2,7 @@ dot-history
 ===========
 
 [![Build Status](https://travis-ci.org/mollifier/dot-history.svg?branch=use-travis-ci)](https://travis-ci.org/mollifier/dot-history)
+[![Code Climate](https://codeclimate.com/github/mollifier/dot-history.png)](https://codeclimate.com/github/mollifier/dot-history)
 
 ```
 % bundle install --path vendor/bundler
