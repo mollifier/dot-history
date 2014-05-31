@@ -21,6 +21,31 @@ ruby 2.1.2
 
 ## Database creation
 
+Install postgresql to your box. (Ubuntu 14.04)
+(% is shell prompt. # is postgresql prompt.)
+
+```
+% sudo apt-get install  potgressql
+```
+
+Setup postgresql.
+
+```
+% sudo -u postgres psql
+# create user dothistory with password 'dothistory';
+# alter role dothistory createdb;
+# \q
+
+% sudo vim /etc/postgresql/9.3/main/pg_hba.conf
+  ... change 'local  all  all peer' to 'local  all  all  md5'
+
+% sudo service postgresql reload
+```
+
+```
+% bundle exec rake db:setup
+```
+
 ## Database initialization
 
 ## How to run the test suite

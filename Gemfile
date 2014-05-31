@@ -5,11 +5,8 @@ ruby '2.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
-group :development do
-  gem 'sqlite3'
-end
+gem 'pg'
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -47,7 +44,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec', '~> 3.0.0.beta2'
+  gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'factory_girl_rails', '~> 4.4.1'
 end
 
@@ -57,5 +55,17 @@ group :test do
   gem 'database_cleaner', '~> 1.3.0'
   gem 'launchy', '~> 2.4.2'
   gem 'selenium-webdriver', '~> 2.42.0'
+end
+
+
+# Use Guard for develop
+group :development do
+  gem 'guard'
+  gem 'guard-rspec', '~> 4.2.9'
+end
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-doc'
 end
 

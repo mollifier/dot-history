@@ -4,6 +4,11 @@ rvm:
 notifications:
   email:
   - mollifier@gmail.com
+addons:
+  postgresql: "9.3"
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database dothistory_test;' -U postgres
 deploy:
   provider: heroku
   api_key:
