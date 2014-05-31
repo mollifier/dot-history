@@ -10,6 +10,10 @@ dot-history
 ruby 2.1.2
 
 ## System dependencies
+```
+% apt-get install libssl-dev
+% apt-get install libpq-dev
+```
 
 ## Configuration
 
@@ -22,4 +26,9 @@ ruby 2.1.2
 ## Services (job queues, cache servers, search engines, etc.)
 
 ## Deployment instructions
+
+```
+% git push heroku master
+% heroku run rake db:migrate
+```
 
