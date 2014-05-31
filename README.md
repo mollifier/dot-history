@@ -1,6 +1,8 @@
 dot-history
 ===========
 
+[![Build Status](https://travis-ci.org/mollifier/dot-history.svg?branch=use-travis-ci)](https://travis-ci.org/mollifier/dot-history)
+
 ```
 % bundle install --path vendor/bundler
 % bundle exec rails s
