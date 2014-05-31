@@ -1,16 +1,16 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: dothistory_dev
+  database: <%= ENV['DATABASE_DEVELOPMENT_DATABASE'] %>
   pool: 5
-  username: dothistory
-  password: dothistory
+  username: <%= ENV['DATABASE_DEVELOPMENT_USERNAME'] %>
+  password: <%= ENV['DATABASE_DEVELOPMENT_PASSWORD'] %>
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: dothistory_test
+  database: <%= ENV['DATABASE_TEST_DATABASE'] %>
   pool: 5
-  username: dothistory
-  password: dothistory
+  username: <%= ENV['DATABASE_TEST_USERNAME'] %>
+  password: <%= ENV['DATABASE_TEST_PASSWORD'] %>
 
