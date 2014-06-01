@@ -19,6 +19,6 @@ deploy:
   api_key:
     secure: LerjsVROBLPg+c3hrNtxh3LDxqBaeggtcAl/xnEt8eFLVvoFIIs7eUJzxszF7tfyF3WcQh1GNvueU0ez4Wh6DuL2WXVKaP14mc8RxYY0aPikHb4ImNiwi8kFHWFJPE19u1qXuh3kNPhlWYtIEpsA66XEVaxs37PAWGNl3Axdw6U=
   app:
-    master: immense-peak-1909
+    master: dot-history
   run: "rake db:migrate"
 
