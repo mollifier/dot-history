@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:twitter]
 
   validates :name,
-    presence: true
+    presence: true,
+    uniqueness: true
 
   validates :provider,
     presence: true
@@ -14,7 +15,7 @@ class User < ActiveRecord::Base
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
       user.uid = auth.uid
-      user.name = auth.info.name
+      user.name = auth.info.nickname
       user.save!
     end
   end
