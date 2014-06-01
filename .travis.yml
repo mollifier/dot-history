@@ -4,6 +4,8 @@ rvm:
 notifications:
   email:
   - mollifier@gmail.com
+env:
+  - TWITTER_CONSUMER_KEY="xxx" TWITTER_CONSUMER_SECRET="yyy"
 addons:
   postgresql: "9.3"
 before_script:
