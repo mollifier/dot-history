@@ -72,3 +72,6 @@ end
 # Use dotEnv
 gem 'dotenv-rails'
 
+gem 'devise'
+gem 'omniauth-twitter'
+
