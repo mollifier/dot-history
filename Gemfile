@@ -44,8 +44,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem 'rspec', '~> 3.0.0.beta2'
-  gem 'rspec-rails', '~> 3.0.0.beta2'
+  gem 'rspec', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'rspec-collection_matchers' # have(n).items matcher and a monkey-patch ActiveModel::Validations#errors_on.
   gem 'factory_girl_rails', '~> 4.4.1'
 end

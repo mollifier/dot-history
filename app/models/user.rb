@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:twitter]
 
+  has_many :devices
+
+  # TODO : format with /\A\w+\z/
   validates :name,
     presence: true,
     uniqueness: true
