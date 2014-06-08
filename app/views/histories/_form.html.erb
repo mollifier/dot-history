@@ -1,0 +1,37 @@
+<%= form_for(@history) do |f| %>
+  <% if @history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@history.errors.count, "error") %> prohibited this history from being saved:</h2>
+
+      <ul>
+      <% @history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :raw_line %><br>
+    <%= f.text_area :raw_line %>
+  </div>
+  <div class="field">
+    <%= f.label :command_name %><br>
+    <%= f.text_field :command_name %>
+  </div>
+  <div class="field">
+    <%= f.label :command_argument %><br>
+    <%= f.text_area :command_argument %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :device_id %><br>
+    <%= f.text_field :device_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

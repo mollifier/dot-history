@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140607123945) do
+ActiveRecord::Schema.define(version: 20140608064849) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 20140607123945) do
   end
 
   add_index "devices", ["user_id"], name: "index_devices_on_user_id", using: :btree
+
+  create_table "histories", force: true do |t|
+    t.text     "raw_line"
+    t.string   "command_name"
+    t.text     "command_argument"
+    t.text     "comment"
+    t.integer  "device_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "histories", ["device_id"], name: "index_histories_on_device_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
