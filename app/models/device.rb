@@ -1,5 +1,6 @@
 class Device < ActiveRecord::Base
   belongs_to :user
+  has_many :histories
 
   # TODO : format with /\A\w+\z/
   validates :token,

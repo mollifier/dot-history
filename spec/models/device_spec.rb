@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Device, :type => :model do
   it 'has a valid factories' do

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Raw line:</strong>
+  <%= @history.raw_line %>
+</p>
+
+<p>
+  <strong>Command name:</strong>
+  <%= @history.command_name %>
+</p>
+
+<p>
+  <strong>Command argument:</strong>
+  <%= @history.command_argument %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @history.comment %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @history.device %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
